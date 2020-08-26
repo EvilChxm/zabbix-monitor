@@ -7,10 +7,9 @@
         mode="horizontal"
         @select="handleSelect"
       >
-        <el-menu-item index="1">监控概览</el-menu-item>
-        <el-menu-item index="3">任务管理</el-menu-item>
-        <el-menu-item index="4">数据统计</el-menu-item>
-        <el-menu-item index="2">采集器及监控点</el-menu-item>
+        <el-menu-item index="1">数据概览</el-menu-item>
+        <el-menu-item index="3">告警管理</el-menu-item>
+        <el-menu-item index="4">监控管理</el-menu-item>
       </el-menu>
     </div>
     <div class="e-header-tool">

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Side from './overview/aside'
+import Side from './analyse/aside'
 export default {
   components: { Side },
   data () {

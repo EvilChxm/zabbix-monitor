@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["client"],{"60d7":function(n,e,t){"use strict";t.r(e);var l=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[n._v("client")])},c=[],i=t("2877"),u={},r=Object(i["a"])(u,l,c,!1,null,null,null);e["default"]=r.exports}}]);
+//# sourceMappingURL=client.36fabf39.js.map

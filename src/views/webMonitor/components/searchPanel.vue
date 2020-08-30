@@ -70,7 +70,7 @@ export default {
   methods: {
     createTask () {
       this.$router.push({
-        name: 'serverCreate'
+        name: 'webCreate'
       })
     }
   }

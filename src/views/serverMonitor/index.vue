@@ -32,10 +32,11 @@
       </div>
     </el-main>
     <el-drawer
-      :with-header="false"
+      :with-header="true"
+      size="70%"
       :visible.sync="drawer"
       :direction="direction">
-      <div><detail/></div>
+      <div class="drawer-content"><detail/></div>
     </el-drawer>
   </el-container>
 </template>
@@ -77,5 +78,19 @@ export default {
 }
 .server-list{
   margin-top: 32px;
+}
+.drawer-content{
+  padding: 8px 20px;
+  overflow: auto;
+}
+</style>
+<style lang="less">
+.el-drawer__header{
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+.el-drawer__body{
+  height: calc(100% - 41px);
+  overflow: auto;
 }
 </style>

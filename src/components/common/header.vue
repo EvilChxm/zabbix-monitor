@@ -7,13 +7,13 @@
         mode="horizontal"
         @select="handleSelect"
       >
-        <el-menu-item index="1">数据概览</el-menu-item>
-        <el-menu-item index="3">告警管理</el-menu-item>
-        <el-menu-item index="4">监控管理</el-menu-item>
+        <el-menu-item index="overview">数据概览</el-menu-item>
+        <el-menu-item index="alarm">告警管理</el-menu-item>
+        <el-menu-item index="monitor">监控管理</el-menu-item>
       </el-menu>
     </div>
     <div class="e-header-tool">
-      <div class="e-monitor-type">
+      <!-- <div class="e-monitor-type">
         <el-menu mode="horizontal">
           <el-submenu index="2">
             <template slot="title">网站监控</template>
@@ -21,7 +21,7 @@
             <el-menu-item index="2-2">基础设施监控</el-menu-item>
           </el-submenu>
         </el-menu>
-      </div>
+      </div> -->
       <div class="e-header-tool__list">
         <span class="e-tool-item"><i class="el-icon-bell" title="告警通知"></i></span>
         <span class="e-tool-item"><i class="el-icon-s-data" title="仪表盘"></i></span>
@@ -39,13 +39,18 @@ import defaultAvatar from '../../assets/avatar.png'
 export default {
   data () {
     return {
-      activeIndex: '1',
+      activeIndex: 'overview',
       avatarUrl: defaultAvatar
     }
   },
+  mounted () {
+    console.log(this.$route, 111)
+  },
   methods: {
     handleSelect (key, keyPath) {
-      console.log(key, keyPath)
+      this.$router.push({
+        path: `/main/${key}`
+      })
     }
   }
 }

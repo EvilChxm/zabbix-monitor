@@ -11,8 +11,13 @@ const routes = {
     },
     {
       path: 'server',
+      name: 'monitorServer',
       component: () => import(/* webpackChunkName: "server" */ '../views/routerView.vue'),
       children: [
+        {
+          path: '',
+          redirect: 'list'
+        },
         {
           path: 'list',
           name: 'serverList',
@@ -27,8 +32,13 @@ const routes = {
     },
     {
       path: 'web',
+      name: 'monitorWeb',
       component: () => import(/* webpackChunkName: "web" */ '../views/routerView.vue'),
       children: [
+        {
+          path: '',
+          redirect: 'list'
+        },
         {
           path: 'list',
           name: 'webList',

@@ -1,14 +1,13 @@
 <template>
   <el-menu
-      default-active="2"
+      default-active="serverList"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose">
-      <el-menu-item index="2">
+      @select="handleSelect">
+      <el-menu-item index="serverList">
         <i class="el-icon-menu"></i>
         <span slot="title">服务器监控</span>
       </el-menu-item>
-      <el-menu-item index="3">
+      <el-menu-item index="webList">
         <i class="el-icon-document"></i>
         <span slot="title">网站监控</span>
       </el-menu-item>
@@ -21,11 +20,10 @@ export default {
     return {}
   },
   methods: {
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
+    handleSelect (key, keyPath) {
+      this.$router.push({
+        name: key
+      })
     }
   }
 }
